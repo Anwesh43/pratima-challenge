@@ -6,13 +6,64 @@
         <script src="./bower_components/jquery/dist/jquery.min.js">
         </script>
         <script src="./setup.js"></script>
+        <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js">
+        </script>
+        <link href="./bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
+        <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./styles.css" rel="stylesheet">
     </head>
     <body>      
-        <input type="file" id="uploader" style="visibility:hidden">
-        <button id="uploadChanger">click</button>
-        <div id="uploadDragBox" ondragover = "dover(event)" ondrop = "drop(event)" style="border:1px solid black;width:500px;height:500px;">
+        <div id="search-box" class="row">
+            <div class="col-lg-6">
+                <h1><small>Imagography</small></h1>
+                <h2><small>share,upload,manage,delete</small></h2>
+            </div>
+            <div class="col-lg-6">
+                <p></p>
+                <p></p>
+                <p></p>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search" id="searchImage"></button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for..." id="searchText">
+                </div>
+            </div>
         </div>
+                
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+        <div class="row">
+        <div class="col-md-6 col-xs-6">
+        <div id="uploadDragBox" ondragover = "dover(event)" ondrop = "drop(event)">
+            <input type="file" id="uploader" style="visibility:hidden">
+            <button id="uploadChanger"></button>
+        </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
         <div id="boxer">   
+        </div>
+        </div>
+        </div>
+        <div class="modal fade" id="saveModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <img src="icons/loader.gif">
+                    </div>
+                    <div class="modal-footer">
+                        
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
         </div>
     </body>
 </html>
